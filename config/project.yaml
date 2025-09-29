@@ -1,0 +1,41 @@
+seed: 42
+paths:
+  data_store: ${env:DATA_STORE, './data_store'}
+  run_dir: ${env:RUN_DIR, './runs'}
+modalities: [OCT]  # или [OCT, FUNDUS]
+
+classes_file: config/classes.yaml
+
+tasks:
+  segmentation: true
+  classification: true
+  regression: false
+
+segmentation:
+  activation: sigmoid  # sigmoid|softmax
+  image_size: [512, 512]
+
+training:
+  batch_size: 4
+  num_workers: 4
+  epochs: 30
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+  amp: true
+  save_metric: dice
+
+model:
+  base_channels: 64
+  depth: 4
+  dropout: 0.1
+
+cls_head:
+  labels: [ERM, VMT]  # какие признаки оценивать как присутствие/отсутствие
+
+losses:
+  seg:
+    type: dice_bce  # dice|bce|dice_bce|tversky|focal
+    pos_weight: 1.0
+  cls:
+    type: bce
+    pos_weight: 1.0

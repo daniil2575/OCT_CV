@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OctMultitaskOutput",
+  "type": "object",
+  "properties": {
+    "multilabel": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "masks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "путь к PNG"
+      }
+    }
+  }
+}
