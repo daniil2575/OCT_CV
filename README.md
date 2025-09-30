@@ -33,7 +33,7 @@ uvicorn service.app:app --host '***' --port '***'
 
 ## Пример предсказания
 
-![Пример OCT-снимка с разметкой](docs/example_oct.png)
+![Пример OCT-снимка с разметкой](example_prediction.png)
 
 ## Лицензия
 MIT
