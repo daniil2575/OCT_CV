@@ -31,5 +31,9 @@ uvicorn service.app:app --host '***' --port '***'
 - **Seg**: per-pixel многоклассовая (sigmoid per-class, one-vs-all) или softmax — по конфигу.
 - **Cls**: мульти-лейбл по глобальному пулу признаков.
 
+## Пример предсказания
+
+![Пример OCT-снимка с разметкой](docs/example_oct.png)
+
 ## Лицензия
 MIT
