@@ -7,7 +7,7 @@ name = "octmultitask"
 version = "0.1.0"
 description = "Multitask OCT segmentation & classification"
 readme = "README.md"
-authors = [{ name = "Your Name" }]
+authors = [{ name = "daniil2575" }]
 requires-python = ">=3.10"
 dependencies = [
   "torch>=2.2",
